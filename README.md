@@ -51,7 +51,7 @@ This project consists of two components:
 Simply run the installation script:
 
 ```bash
-bash install.sh
+sudo bash install.sh
 ```
 
 This will:
