@@ -17,8 +17,8 @@ Item {
 
         PlasmaComponents.TextField {
             id: commandInput
-            text: plasmoid.configuration.command ?? "TEXTMONITOR"
-            placeholderText: "TEXTMONITOR"
+            text: plasmoid.configuration.command ?? "uptime"
+            placeholderText: "uptime"
             Layout.fillWidth: true
             onEditingFinished: plasmoid.configuration.command = text
         }

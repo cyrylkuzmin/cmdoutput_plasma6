@@ -53,7 +53,7 @@ PlasmoidItem {
     function refresh() {
         if (!mainWidget.outputLabelRef) return;
         
-        var commandText = plasmoid.configuration.command ?? "TEXTMONITOR";
+        var commandText = plasmoid.configuration.command ?? "uptime";
         if (!commandText || commandText.trim() === "") {
             mainWidget.outputLabelRef.text = "No command set";
             return;

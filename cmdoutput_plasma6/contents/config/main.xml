@@ -7,7 +7,7 @@
 
     <group name="General">
         <entry name="command" type="String">
-            <default>TEXTMONITOR</default>
+            <default>uptime</default>
         </entry>
 
         <entry name="maxOutputLength" type="Int">
