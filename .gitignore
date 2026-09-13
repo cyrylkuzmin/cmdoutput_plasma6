@@ -1,0 +1,39 @@
+# Build directories
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+ninja.build
+build.ninja
+*.ninja
+
+# Qt/CMake generated files
+*.qmltypes
+qmldir
+moc_*.cpp
+*_autogen/
+.qmlls.ini
+*.json
+
+# IDE files
+.vscode/
+.idea/
+*.user
+*.creator
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Python/virtualenv
+__pycache__/
+*.pyc
+venv/
+env/
+
+# Install manifest
+install_manifest.txt
