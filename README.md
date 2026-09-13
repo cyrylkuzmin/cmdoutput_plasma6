@@ -39,8 +39,8 @@ sudo dnf install cmake gcc-c++ ninja-build qt6-qtbase-devel
 This project consists of two components:
 
 1. **CommandRunner** - A C++ QML plugin that wraps command execution via `QProcess`
-   - Located in: `cmdoutput_plasma6/contents/code/CommandRunner.{h,cpp}`
-   - Compiled and installed to: `~/.local/lib/qt6/qml/org/kde/plasma/private/commandrunner/`
+  - Located in: `cmdoutput_plasma6/contents/code/CommandRunner.{h,cpp}`
+  - Compiled and installed to: `/usr/lib/qt6/qml/org/kde/plasma/private/commandrunner/`
 
 2. **Plasmoid (Widget)** - The QML UI and configuration files
    - Located in: `cmdoutput_plasma6/` folder (metadata.json, contents/ui/, contents/config/)
@@ -74,7 +74,7 @@ bash build-install.sh
 
 This will:
 1. Compile the C++ plugin
-2. Install it to `~/.local/lib/qt6/qml/org/kde/plasma/private/commandrunner/`
+2. Install it to `/usr/lib/qt6/qml/org/kde/plasma/private/commandrunner/`
 3. Display setup instructions if needed
 
 #### Step 2: Install the Plasmoid Widget
