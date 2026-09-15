@@ -160,6 +160,7 @@ This avoids touching user environment variables in a shell rc file and works rel
 
 - **Command** - Shell command to execute (e.g., `echo 123`, `uptime`, `date`)
 - **Max Output Length** - Maximum characters to display (default: 50)
+- **Max Width** - Maximum widget width (default: 150)
 - **Update Interval** - Auto-refresh interval in minutes (0 = disabled)
 
 ### Examples
@@ -176,6 +177,9 @@ cat /sys/class/power_supply/BAT0/capacity
 
 # Show number of unread emails
 thunderbird-sync | wc -l
+
+# Show network status
+ping -c 1 8.8.8.8 > /dev/null 2>&1 && echo "🟢" || echo "🔴"
 ```
 
 ## Implementation Details
