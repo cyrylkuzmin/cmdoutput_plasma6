@@ -37,6 +37,19 @@ Item {
         }
 
         PlasmaComponents.Label {
+            text: i18n("Max width:")
+            Layout.fillWidth: true
+        }
+
+        PlasmaComponents.SpinBox {
+            id: widgetWidthInput
+            from: 32; to: 2000; stepSize: 1
+            value: plasmoid.configuration.widgetWidth ?? 150
+            Layout.fillWidth: true
+            onValueChanged: plasmoid.configuration.widgetWidth = value
+        }
+
+        PlasmaComponents.Label {
             text: i18n("Update Interval (minutes, 0 = only at startup):")
             Layout.fillWidth: true
         }
@@ -56,6 +69,7 @@ Item {
             onClicked: {
                 plasmoid.configuration.command = commandInput.text
                 plasmoid.configuration.maxOutputLength = maxOutputLengthInput.value
+                plasmoid.configuration.widgetWidth = widgetWidthInput.value
                 plasmoid.configuration.updateInterval = intervalInput.value
             }
         }

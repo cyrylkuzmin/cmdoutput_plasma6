@@ -11,6 +11,7 @@ PlasmoidItem {
     preferredRepresentation: compactRepresentation
 
     property int maxOutputLength: plasmoid.configuration.maxOutputLength !== undefined ? plasmoid.configuration.maxOutputLength : 50
+    property int widgetWidth: plasmoid.configuration.widgetWidth !== undefined ? plasmoid.configuration.widgetWidth : 150
     property var outputLabelRef: null
 
     function formatCommandOutput(rawText) {
@@ -66,11 +67,12 @@ PlasmoidItem {
 
     compactRepresentation:  Item {
             id: main
-            implicitWidth: 150
+            implicitWidth: widgetWidth
             implicitHeight: 32
             clip: true
             Layout.fillWidth: true
-            Layout.preferredWidth: Math.max(120, outputLabel.implicitWidth + 16)
+            Layout.preferredWidth: Math.max(widgetWidth, outputLabel.implicitWidth + 16)
+            Layout.minimumWidth: widgetWidth
             Layout.maximumWidth: 1e9
 
             PlasmaComponents.Label {
